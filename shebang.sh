@@ -1,9 +1,26 @@
 #!/bin/sh
 
+main_sh=$(finger $USER|grep -oP 'Shell: \K.*')
 fullname="$PWD/$1"
-filename=$(basename -- "$PWD/$1")
-extension="${filename##*.}"
-filename="${filename%.*}"
+fulfname="${fullname##*/}"  # Full File Name :p
+extension="${fulfname##*.}"
+filename="${fulfname%.*}"
+tmpffname="$PWD/$filename$RANDOM.$extension"
+tmpfname="${tmpffname%.*}"
+
+rmshbng() {
+
+    # $i may later be used, as it counts lines read..
+
+    while IFS= read -r line; do
+        [ "$i" != "" ] && echo "$line" >> "$tmpffname"
+        i=$((i+1))
+    done < "$fullname"
+
+    # This thing, `\n`++ incase, theres none @ bottom
+
+    [ -n "$line" ] && echo '' >> "$tmpffname"
+}
 
 
 case $extension in
@@ -12,12 +29,13 @@ case $extension in
 	;;
 
 	rs)
-		rustc $fullname
-		$PWD/$filename
-		rm $PWD/$filename
+		rmshbng
+		rustc $tmpffname
+		$tmpfname
+		rm $tmpffname
 	;;
 
-	sh | "")
+	sh | bash)
 		bash $filename
 	;;
 
@@ -29,7 +47,15 @@ case $extension in
 		fish $filename
 	;;
 
+	"")
+		$main_sh $filename
+	;;
+
 	*)
-		echo "$extension not supported yet..";
+		if [[ $filename != *.* ]]; then
+			$main_sh $filename
+		else
+			echo "$extension not supported yet..";
+		fi
 
 esac
