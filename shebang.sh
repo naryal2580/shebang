@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # main_sh=$(finger $USER|grep -oP 'Shell: \K.*')
+arguments="${@:2}"  # because, 1st arg is filename
 fullname="$PWD/$1"
 fulfname="${fullname##*/}"  # Full File Name :p
 extension="${fulfname##*.}"
@@ -36,50 +37,50 @@ rmshbng() {
 
 case $extension in
 	py | pyc)
-		python3 $fullname
+		python3 $fullname $arguments
 	;;
 
 	rs)
 		rmshbng
 		rustc $tmpffname
-		$tmpfname
+		$tmpfname $arguments
 		rm $tmpffname
 		rm $tmpfname
 	;;
 
 	sh | bash | zsh)
-		$good_sh $filename
+		$good_sh $filename $arguments
 	;;
 
 	go)
 		rmshbng
-		go run $tmpffname
+		go run $tmpffname $arguments
 		rm $tmpffname
 	;;
 
 	c)
 		gcc -o $tmpfname $filename
-		$tmpfname
+		$tmpfname $arguments
 	;;
 
 	js)
 		rmshbng
-		node $tmpffname
+		node $tmpffname $arguments
 		rm $tmpffname
 	;;
 
 	fish)
-		fish $filename
+		fish $filename $arguments
 	;;
 
 	"")  # a JIC* case  [*Just in case]
 		# this is a fin' rare case ;)
-		$main_sh $filename
+		$main_sh $filename $arguments
 	;;
 
 	*)
 		if [[ $filename != *.* ]]; then  # if no extension
-			$good_sh $filename
+			$good_sh $filename $arguments
 		else
 			echo "$extension not supported yet..";
 		fi
