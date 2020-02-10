@@ -49,7 +49,7 @@ case $extension in
 	;;
 
 	sh | bash | zsh)
-		$good_sh $fulfname $arguments
+		$good_sh $fullname $arguments
 	;;
 
 	go)
@@ -70,17 +70,17 @@ case $extension in
 	;;
 
 	fish)
-		fish $filename $arguments
+		fish $fullname $arguments
 	;;
 
 	"")  # a JIC* case  [*Just in case]
 		# this is a fin' rare case ;)
-		$main_sh $filename $arguments
+		$main_sh $fullname $arguments
 	;;
 
 	*)
 		if [[ $filename != *.* ]]; then  # if no extension
-			$good_sh $filename $arguments
+			$good_sh $fullname $arguments
 		else
 			echo "$extension not supported yet..";
 		fi
