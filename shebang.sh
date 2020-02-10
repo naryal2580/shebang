@@ -49,7 +49,7 @@ case $extension in
 	;;
 
 	sh | bash | zsh)
-		$good_sh $filename $arguments
+		$good_sh $fulfname $arguments
 	;;
 
 	go)
