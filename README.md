@@ -2,6 +2,9 @@
 A very handy tool for cross-language peps.
 
 
+> **NOTE**: Don't wanna use this at the top of file? No problem, use this script and call the file.
+> I mean, 1st install this anywhere at the `$PATH`. Then, call this before the filename.
+
 
 ## What do this do? Does it have some super cow powers?
 
