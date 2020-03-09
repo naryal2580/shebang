@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# main_sh=$(finger $USER|grep -oP 'Shell: \K.*')
-arguments="${@:2}"  # because, 1st arg is filename
+arguments="${@:2}"  # because, 1st arg. is the filename
 fullname="$PWD/$1"
 fulfname="${fullname##*/}"  # Full File Name :p
 extension="${fulfname##*.}"
