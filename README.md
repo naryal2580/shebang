@@ -1,14 +1,14 @@
-# #!/5h3b4nG
+# #!/5h3_b4nG
 A very handy tool for cross-language peps.
-
-
-> **NOTE**: Don't wanna use this at the top of file? No problem, use this script and call the file.
-> I mean, 1st install this anywhere at the `$PATH`. Then, call this before the filename.
 
 
 ## What do this do? Does it have some super cow powers?
 
-`shebang` helps to keep stuff easy and pain-less by using `#!/shebang` at the head of files to any _supported languages_*, allowing executable flag via `chmod` and simply executing it. Well, you might call it a super cow power :stuck_out_tongue_winking_eye:
+`shebang` helps to keep stuff easy and pain-less by using `#!/shebang` at the head of files to any _supported languages_*, allowing executable flag via `chmod` and simply executing it.
+
+Or, just use % `sb $FILENAME` to execute it!!
+
+Well, you might call it a simple cow power :stuck_out_tongue_winking_eye:
 
 ## Why!? Why??
 
@@ -18,11 +18,16 @@ It's really a pain in the _fingers_ to compile, execute the program and doing it
 
 ### - To Install:
 
-> Just add a symbolic link to `shebang.sh` here, to `/shebang`, or simply copy it there, or it's your choice install it how you would love to.
+> Just run `% sh ./main.sh --install` 
 
 ### - To Use:
 
-> Just simply add or, use `#!/shebang` at any file with **good extension**** and give the file containing the code an executable flag. Boo Yea! Just execute it now.
+> - **Using it as shebang!**
+>   1. Add `#!/shebang` to the head of the file you want to execute.
+>   2. Now, provide it some executable permissions `% chmod +x $FILENAME` (accordingly)
+>   3. **Important**: Do not tamper with the _file-extension_** as it's the only known way (to me) for recon of lang.
+> - **Using the command `sb`**
+>   1. Just run as `% sb $FILENAME`
 
 ### - Does it work?
 
@@ -50,4 +55,4 @@ I would love to hear them all :slightly_smiling_face:
 
 *Your favorite language is not listed? Please feel free to open an issue for it.
 
-**Please do not tamer with the extension, as it the only option used to determine the language here.
+**If you tend to modify it, the script won't be able to detect the language.
