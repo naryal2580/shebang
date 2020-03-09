@@ -31,7 +31,19 @@ It's really a pain in the _fingers_ to compile, execute the program and doing it
 
 ### - Does it work?
 
-> It checks the file extension of the file to determine which language is used and follows the simple instruction(s) to compile and execute ( or just execute it :wink: )
+> It checks the file extension of the file to determine which language is used and follows the simple instruction(s) to compile and execute ( or just execute it :wink:)
+
+### - To Uninstall?
+
+> Simply run `% sh ./main.sh --uninstall`
+
+### - To Re-Install?
+
+> Want the new update of the script?
+> Just `% sh ./main --reinstall`
+>
+> **NOTE**: Make sure you've the latest clone, first.
+
 
 
 
