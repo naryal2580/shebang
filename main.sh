@@ -1,27 +1,26 @@
 #!/bin/sh
 
 # Bit of fanciness
-b='\x1b[1m'
-r='\x1b[0m'
+b='\033[1m'
+r='\033[0m'
 
 banner(){
-	echo -e "$b
+	printf "$b
   ___ _    ____  _    _ _       ___ 
  | __| |_ |__ / | |__| | | _ _ / __|
  |__ \ ' \ |_ \ | '_ \_  _| ' \ (_ |
  |___/_||_|___/_|_.__/ |_||_||_\___|
-             |___|                  $r $1
-"
+             |___|                  $r $1\n"
 }
 
 install(){
 	ipath=$1
 	sname=$2
 
-	echo -e "[$b+$r] Installing to $b $ipath $r"
+	printf "[$b+$r] Installing to $b $ipath $r\n"
 	sudo cp ./shebang.sh $ipath
 
-	echo -e "[$b+$r] Can be shebanged via $b $sname $r"
+	printf "[$b+$r] Can be shebanged via $b $sname $r\n"
 	sudo ln -s $ipath $sname
 
 }
@@ -30,10 +29,10 @@ uninstall(){
 	ipath=$1
 	sname=$2
 
-	echo -e "[$b-$r] Uninstalling from $b $ipath $r"
+	printf "[$b-$r] Uninstalling from $b $ipath $r\n"
 	sudo rm $ipath
 
-	echo -e "[$b-$r] Now, Cannot be $b #!$sname $r"
+	printf "[$b-$r] Now, Cannot be $b #!$sname $r\n"
 	sudo rm $sname
 }
 
