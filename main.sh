@@ -47,17 +47,29 @@ case "$1" in
 	;;
 
 
-	u|-u|-un|-uni|--uninstall|uninstall)
+	u|-u|--uninstall|uninstall)
 		banner "Uninstaller"
 		uninstall "/usr/bin/sb" "/shebang"
 
 	;;
 
 
-	r|-r|-re|-rei|--reinstall|reinstall)
+	r|-r|--reinstall|reinstall)
 		banner "Re-Installer"
 		uninstall "/usr/bin/sb" "/shebang"
 		install "/usr/bin/sb" "/shebang"
+
+	;;
+
+
+	h|-h|--help|help|"")
+		banner
+		printf "\nInstall 5h3_b4nG:\n"
+		echo "    ./main.sh --install"
+		printf "\nRe-install 5h3_b4nG:\n"
+		echo "    ./main.sh --reinstall"
+		printf "\nUninstall 5h3_b4nG:\n"
+		echo "    ./main.sh --reinstall"
 
 	;;
 
