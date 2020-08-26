@@ -13,7 +13,8 @@ if type "zsh" > /dev/null; then
 elif type "bash" > /dev/null; then
 	good_sh="bash"
 else
-	good_sh=$(cat /etc/passwd | grep $(whoami) | cut -d':' -f7 | rev | cut -d'/' -f1 | rev)
+	line=$(cat /etc/passwd | grep $(whoami))
+	good_sh=${x##*/}
 fi
 
 rmshbng() {
