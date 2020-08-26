@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 arguments="${@:2}"  # because, 1st arg. is the filename
 fullname="$PWD/$1"
