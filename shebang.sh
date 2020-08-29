@@ -69,6 +69,12 @@ case $extension in
 		rm $tmpffname
 	;;
 
+	rb)
+		rmshbng
+		ruby $tmpffname $arguments
+		rm $tmpffname
+	;;
+
 	fish)
 		fish $fullname $arguments
 	;;
