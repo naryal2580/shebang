@@ -52,9 +52,10 @@ It's really a pain in the _fingers_ to compile, execute the program and doing it
 I am on a plan to support as many languages as possible while making this _thing_ as light as possible. And, currently supported languages are listed below:
 
 - Python
+- Ruby
 - Rust Lang
 - Go Lang
-- C Lang
+- C
 - JavaScript
 - A few Shell Languages (sh, bash, zsh, fish)
   
