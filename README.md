@@ -6,7 +6,7 @@ A very handy tool for cross-language peps.
 
 `shebang` helps to keep stuff easy and pain-less by using `#!/shebang` at the head of files to any _supported languages_*, allowing executable flag via `chmod` and simply executing it.
 
-Or, just use % `sb $FILENAME` to execute it!!
+Or, just use `$ sb $FILENAME` to execute it!!
 
 Well, you might call it a simple cow power :stuck_out_tongue_winking_eye:
 
@@ -18,7 +18,7 @@ It's really a pain in the _fingers_ to compile, execute the program and doing it
 
 ### - To Install:
 
-> Just run `% sh ./main.sh --install` 
+> Just run `$ sh ./main.sh --install` 
 
 ### - To Use:
 
@@ -35,12 +35,12 @@ It's really a pain in the _fingers_ to compile, execute the program and doing it
 
 ### - To Uninstall?
 
-> Simply run `% sh ./main.sh --uninstall`
+> Simply run `$ sh ./main.sh --uninstall`
 
 ### - To Re-Install?
 
 > Want the new update of the script?
-> Just `% sh ./main --reinstall`
+> Just `$ sh ./main --reinstall`
 >
 > **NOTE**: Make sure you've the latest clone, first.
 
