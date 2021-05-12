@@ -69,7 +69,7 @@ case "$1" in
 		printf "\nRe-install 5h3_b4nG:\n"
 		echo "    ./main.sh --reinstall"
 		printf "\nUninstall 5h3_b4nG:\n"
-		echo "    ./main.sh --reinstall"
+		echo "    ./main.sh --uninstall"
 
 	;;
 
