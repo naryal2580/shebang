@@ -24,8 +24,8 @@ It's really a pain in the _fingers_ to compile, execute the program and doing it
 
 > - **Using it as shebang!**
 >   1. Add `#!/shebang` to the head of the file you want to execute.
->   2. Now, provide it some executable permissions `% chmod +x $FILENAME` (accordingly)
->   3. **Important**: Do not tamper with the _file-extension_** as it's the only known way (to me) for recon of lang.
+>   2. Now, provide it some executable permissions `$ chmod +x $FILENAME` (accordingly)
+>   3. **Important**: Do not tamper with the _file-extension_** as it's the only known way (to me) for recon of the language.
 > - **Using the command `sb`**
 >   1. Just run as `% sb $FILENAME`
 
